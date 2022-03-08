@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <input type="number" id="dom1" placeholder="num1" /><br />
+  <input type="number" id="dom2" placeholder="num2" onblur="" /><br />
+  <button onclick="main()">Check</button>
+  <p id="sub1"></p>
+  <p id="sub2"></p>
+  <p id="sub3"></p>
+  <p id="sub4"></p>
+  <p id="sub5"></p>
+  <body>
+    <script>
+      function add(firstel, secondel) {
+        var firstel = document.getElementById("dom1").value;
+        var secondel = document.getElementById("dom2").value;
+        //doubt
+        var overall = parseInt(firstel) + parseInt(secondel);
+        return overall;
+      }
+      function sub(firstel,secondel){
+        var firstel = document.getElementById("dom1").value;
+        var secondel = document.getElementById("dom2").value;
+        var overall = firstel - secondel;
+        return overall
+      }
+      function mul(firstel,secondel){
+        var firstel = document.getElementById("dom1").value;
+        var secondel = document.getElementById("dom2").value;
+        var overall = firstel * secondel;
+        return overall
+      }
+      function divi(firstel,secondel){
+        var firstel = document.getElementById("dom1").value;
+        var secondel = document.getElementById("dom2").value;
+        var overall = firstel / secondel;
+        return overall
+      }
+       function modu(firstel,secondel){
+        var firstel = document.getElementById("dom1").value;
+        var secondel = document.getElementById("dom2").value;
+        var overall = firstel % secondel;
+        return overall
+      }
+      function main() {
+        var total = add();
+        document.getElementById('sub1').innerHTML=total
+        var total= sub();
+        document.getElementById('sub2').innerHTML=total
+        var total= mul();
+        document.getElementById('sub3').innerHTML=total
+        var total= divi();
+        document.getElementById('sub4').innerHTML=total
+        var total= modu();
+        document.getElementById('sub5').innerHTML=total
+      }
+
+    </script>
+
+
+<!-- <script>
+      function first(a, b) {
+        var z = a + b;
+        document.write(z + "<br>");
+      }
+      function second(a, b) {
+        var z = a - b;
+        document.write(z + "<br>");
+      }
+      function third(a, b) {
+        var z = a * b;
+        document.write(z + "<br>");
+      }
+      function main(a, b) {
+        first(a, b);
+        second(a, b);
+        third(a, b);
+      }
+      main(12, 3);
+    </script> -->
+  </body>
+</html>
